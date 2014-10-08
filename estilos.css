@@ -5,8 +5,31 @@ a{
 
 body{
 	background: #EEEEEE;
-	font-family: Arial;
+	font-family: "Open Sans";
 	font-size: 16px;
+}
+
+footer{
+
+	background: #22BCE0;
+	text-align: center;
+	color:rgba(255,255,255,0.7);
+	padding: 1em;
+}
+
+footer p:first-child{
+	margin-bottom: 0;
+}
+
+footer p:last-child{
+	margin-top: 0;
+}
+
+footer p:last-child:before
+,footer p:last-child:after{
+
+	content: "-"
+
 }
 
 header{
@@ -14,9 +37,8 @@ header{
 	background: #343B54;
 	color:white;
 	overflow: hidden;	
-	padding: 0.5em;
+	padding: 0.5em 0 0 0;
 	position: relative;
-
 }
 
 header figure{
@@ -26,20 +48,21 @@ header figure{
 header h1{
 	font-size: 1.2em;
 	font-weight: normal;
-	margin: .5em 70px 0 0;
+	margin: 1em 70px 0 0;
 
 }
 
 header #avatar{
+	margin: .5em .5em 0 0;
 	position: absolute;
 	top:0;
 	right: 0;
-	margin: .5em .5em 0 0;
+
 }
 
 header #logo img{
 	border-right: 1px solid white;
-	margin-right:  0.5em;
+	margin-right: 0.5em;
 	padding-right: 0.5em;
 	width: 52px;
 }
@@ -51,46 +74,120 @@ header #avatar img{
 
 nav{
 	background:  #80BCA3;
-	padding: .5em 0;
+	padding: 0.2em 1em 0 0;
 	position: relative;
 }
 
 nav ul{
 	list-style: none;
 	margin: 0;
-	padding: 0;
 }
+
 nav ul li{
 	display: inline-block;
 	margin: 0 1em 0 0;
 }
+
+
+
 nav ul li a{
 	color:white;
 	text-decoration: none; 
 	display: block;
-	padding: .5em 0;
-}
-/*
-#logo,#avatar, header h1{
-
-	display: inline-block;
+	padding: 0.5em 0;
 
 }
-*/
 
 nav ul #publicar_nav{
-	border: 1px solid red;
 	position: absolute;
-	top: 0;
+	top: -0.4em;
 	right: 0;
 
 }
 
 nav ul #publicar_nav a{
 	background: #22BCE0;
+	font-style: italic;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	padding: 1em 0.5em;
+	border-radius: 5px;
+	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 }
-
 
 #contenido{
+	margin:1em;
 
 }
+
+
+#contenido .item{
+	background: white;
+	border-bottom: 3px solid #22BCE0;
+	margin-bottom: 2em;
+	min-height: 148px;
+	position: relative;
+}
+
+#contenido .item .autor_item{
+	color: #AAA;
+}
+
+#contenido .item .fecha_item{
+	color: #AAA;
+}
+
+#contenido .item .datos_item{
+
+	text-align: right;
+	margin: 1em 1em 0 0;
+}
+
+#contenido .item .datos_item .tag_item
+{
+	background: #F4502A;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.2em 0.5em;
+	float:left;
+	border-radius: 10%;
+}
+#contenido .item .imagen_item{
+	float:left;
+} 
+
+#contenido .item .imagen_item img{
+	width: 96px;
+}
+
+#contenido .item .titulo_item {
+	padding:1em 1em 0 0;
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+#contenido .item .titulo_item a{
+
+	text-decoration: none;
+		color: #A5A5A5;
+}
+
+#contenido .item .votacion{
+	background: white;
+	position: absolute;
+	left: 10%;
+	top:100%;
+	width: 80%;
+	margin-top: 3px;
+	padding: 0.2em 0.5em;
+	border-radius: 0 0 0.5em 0.5em;
+
+}
+
+#contenido .item .votacion .comentario_item
+,#contenido .item .votacion .guardar_item{
+
+	float: right;
+}
+
+
