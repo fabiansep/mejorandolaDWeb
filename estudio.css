@@ -1,0 +1,46 @@
+.Form-pNombre{
+
+	float:left;
+	color:blue;
+	margin: 0 1em;
+	width: 100.219px;
+}
+.Form-inputNombre{
+	float:left;
+	margin-bottom: 1em;
+
+}
+.Form-comentario{
+	float: left;
+	clear: both;
+	margin: 0 1em;
+}
+.Form-textArea{
+
+}
+
+
+.Form-textArea:focus{
+	background: #eee;
+	outline: 0;
+}
+
+.Form-inputNombre
+,.Form-textArea{
+	width: 184px;
+}
+
+body{
+	background: #F2F2F2;
+	font-family: "Verdana";
+	font-size: 16px;
+}
+.seccion{
+
+	display: inline-block;
+	background: #D8D8D8;
+	padding: 3em;
+	margin:8em;
+	border-radius: 1em;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
