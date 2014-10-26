@@ -13,11 +13,11 @@
 
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?byvnjq');
-	src:url('fonts/icomoon.eot?#iefixbyvnjq') format('embedded-opentype'),
-		url('fonts/icomoon.woff?byvnjq') format('woff'),
-		url('fonts/icomoon.ttf?byvnjq') format('truetype'),
-		url('fonts/icomoon.svg?byvnjq#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?-w2yso');
+	src:url('fonts/icomoon.eot?#iefix-w2yso') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-w2yso') format('woff'),
+		url('fonts/icomoon.ttf?-w2yso') format('truetype'),
+		url('fonts/icomoon.svg?-w2yso#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -93,7 +93,7 @@ header{
 	background: #343B54;
 	color:white;
 	overflow: hidden;	
-	padding: 0.5em 0 0 0;
+	padding: 0;
 	position: relative;
 }
 
@@ -102,20 +102,23 @@ header figure{
 }
 
 header h1{
-	font-size: 1.2em;
-	font-weight: normal;
-	margin: 1em 70px 0 0;
-
+	font-size: 2em;
+	font-weight: bold;
+	margin: .7em 70px 0 0;
+	text-align: center;
 }
 
 header #avatar{
-	margin: .5em .5em 0 0;
+	margin: 1em .5em 0 0;
 	position: absolute;
 	top:0;
 	right: 0;
 
 }
 
+header .span-h1{
+	display: none;
+}
 
 header #logo{
 		border-right: 1px solid white;
@@ -206,31 +209,15 @@ nav ul #publicar_nav a{
 }
 
 
-
 #contenido{
 	margin:1em;
-
 }
 
-.up{
-
-	color:green;
-
-}
 
 #contenido article  .votacion a{
 			text-decoration: none;
 }
-.down{
-	color:red;
 
-}
-
-.guardar_item{
-	color: yellow;
-	text-decoration: none;
-	margin-top: .1em;
-}
 
 #contenido .item{
 	background: white;
@@ -251,7 +238,7 @@ nav ul #publicar_nav a{
 #contenido .item .datos_item{
 
 	text-align: right;
-	margin: 1em 1em 0 0;
+	margin: 1em 1em 0.7em 1em;
 }
 
 #contenido .item .datos_item .tag_item
@@ -304,8 +291,50 @@ nav ul #publicar_nav a{
 
 .
 
+.down{
+	color:red;
 
-/*
+}
+
+.guardar_item{
+	color: yellow;
+	text-decoration: none;
+	margin-top: .1em;
+}
+.menu-resumen{
+	display: none;
+}
+.up{
+
+	color:green;
+
+}
+
+.formulario{
+
+	margin:1em;
+}
+
+.formulario input{
+	text-align: left;
+	margin-right: .5em;
+ 	border:1px solid #ccd;
+ 	border-radius: 5px;
+ 	padding: 0.2em 0.6em;	
+}
+
+ .formulario input[type="submit"]{
+
+ 	background: #22BCE0;
+	font-style: italic;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	padding: .6em .8em;
+	border-radius: 5px;
+	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;	
+	color:white ;
+ }
+
+/* Vista para Imprimir
 @media print{
 	body{
 		font-size: 30px;
@@ -313,7 +342,122 @@ nav ul #publicar_nav a{
 }
 */
 
+/***Vista Para Iphone 5***/
+@media screen and (max-width:414px){
+
+	nav, nav ul, nav ul li{
+		padding:0;
+		margin:0;
+	}
+
+	nav ul li a{
+		color:white;
+		text-decoration: none; 
+		display: block;
+		-webkit-transition:.3s;
+
+	}
+
+
+	h1{
+		display: block;
+	}
+	header h1{
+		text-align: left;
+		color:white;
+		margin:.5em 0;
+	}
+
+	body{
+		color:red;
+	}
+
+	header figure{
+		margin: 1em;
+	}
+
+	.nav-element{
+		display: none;
+	}
+
+	.li-resumen{
+		width: 50%;
+	}
+	.menu-resumen{
+		display: inline-block;
+		width:100%;
+		padding: 0.75em 0;
+		height: 1.5em;
+	}
+
+	.icon-menu:before {
+		content: "\e604";
+		padding:1em;
+		font-size: 1.5em;
+		text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+	}
+
+	nav ul #publicar_nav{
+		display:inline-block;
+		width: 50%;
+		text-align: center;
+		margin: 0;
+		top:0em;
+
+	}
+
+
+	nav ul #publicar_nav a{
+
+		font-style: normal;
+		box-shadow: none;
+		padding: .75em 0;
+		border-radius: 0;
+		text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;	
+		padding: 
+	}
+
+	.icon-lapiz:before{
+		display: none;
+		padding: .75em 0;
+	}
+
+	[class^="icon-"], [class*=" icon-"] {
+		height: 1.5em;
+	}
+
+
+	#contenido figure {
+		margin: 0.5em;
+	}
+
+	#contenido .item .titulo_item {
+	padding: 1em 1em 0 0;
+	font-style: italic;
+	font-size: 1em;
+	}
+
+
+
+}
+/*** Fin Vista Para Iphone 5***/
 @media screen and (min-width:800px){
+
+	h1{
+		display: block;
+	}
+
+	header h1{
+		font-size: 1.2em;
+		font-weight: normal;
+		margin: 1em 70px 0 0;
+		text-align: left;
+
+	}
+
+	header .span-h1{
+		display: inline;
+	}
 
 	#contenido{
 		overflow: hidden;
@@ -328,11 +472,68 @@ nav ul #publicar_nav a{
 		float: left;
 
 	}	
+
+ .formulario{
+ 	margin:0;
+ 	padding: 1em 1em 0 1em;
+ 	text-align: right;
+ 	display: none;
+ }
+ 
+ .formulario input{
+
+
+ 	border:1px solid #ccd;
+ 	border-radius: 5px;
+ 	padding: 0.2em 0.6em;
+
+ }
+
+ .formulario input[type="text"]{
+
+ 	margin-bottom: .5em;
+
+ }
+
+ .formulario input[type="submit"]{
+
+ 	background: #22BCE0;
+	font-style: italic;
+
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	padding: .6em .8em;
+	border-radius: 5px;
+	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;	
+	color:white ;
+
+ }
+
+	nav ul li{
+		display: inline-block;
+		margin: 0;
+	}
+
+
+
 }
 
 @media screen and (min-width:1000px){
 
+	h1{
+		display: block;
+	}
 
+	header h1{
+		font-size: 1.2em;
+		font-weight: normal;
+		margin: 1em 70px 0 0;
+		text-align: left;
+
+	}
+
+	header .span-h1{
+		display: inline;
+	}
 	aside{
 		display: block;
 		float: right;
@@ -353,6 +554,40 @@ nav ul #publicar_nav a{
 
 	}	
 
+ .formulario{
+ 	margin:0;
+ 	padding: 1em 1em 0 1em;
+ 	text-align: right;
+ 	display: none;
+ }
+ 
+ .formulario input{
+
+ 	border:1px solid #ccd;
+ 	border-radius: 5px;
+ 	padding: 0.2em 0.6em;
+ }
+
+ .formulario input[type="submit"]{
+
+ 	background: #22BCE0;
+	font-style: italic;
+
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	padding: .6em .8em;
+	border-radius: 5px;
+	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;	
+	color:white ;
+ }
 
 }
+
+/*
+ * Formularios
+ */
+
+ .formulario{
+ 	display: none;
+ }
+
 

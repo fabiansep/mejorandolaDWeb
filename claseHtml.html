@@ -7,7 +7,10 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>	
 	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link rel="stylesheet" type="text/css" href="estilos.css">	
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="stylesheet" type="text/css" href="">	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>	
+	<script type="text/javascript" src="formulario.js"></script>
 	<title>Sitio Web HTML 5</title>
 </head>
 <body>
@@ -16,7 +19,7 @@
 			<img src="logo.png">
 		</figure>
 		<h1>
-			Puls2014:Una super nueva excelente red social diseñada en el curso de mejorando.la
+			Puls2014 <span class="span-h1">:Una super nueva excelente red social diseñada en el curso de mejorando.la</span>
 		</h1>
 		<figure id="avatar">
 			<img src="avatar.jpeg">
@@ -24,16 +27,24 @@
 	</header>
 	<nav>
 		<ul>
-			<li><a href="#">Python</a></li>
-			<li><a href="#">HTML5</a></li>
-			<li><a href="#">JavaScript</a></li>
-			<li><a href="#">CSS3</a></li>
-			<li><a href="#">DJango</a></li>
+			<li class="li-resumen"><a class="menu-resumen icon-menu"href="#"></a></li>
+			<li><a class="nav-element"href="#">Python</a></li>
+			<li><a class="nav-element"href="#">HTML5</a></li>
+			<li><a class="nav-element"href="#">JavaScript</a></li>
+			<li><a class="nav-element"href="#">CSS3</a></li>
+			<li><a class="nav-element"href="#">DJango</a></li>
 			<li id="publicar_nav">
-				<a href="#" class=" icon-lapiz">Publicar</a> 
+				<a href="#" class="  icon-lapiz">Publicar</a> 
 			</li>
 		</ul>
 	</nav>
+	<form action="" id="formulario" class="formulario">
+		<!--<label for="titulo">Titulo:</label>-->
+		<input type="text" id="titulo"  placeholder="Titulo"	required>
+		<!--<label for="url">Url:</label>-->
+		<input type="url"  id="url"		placeholder="url"required>
+		<input type="submit" value="enviar" id="button-publicar">
+	</form>
 	<aside>
 		<video width="320" height="240" controls>
 			<source src="mov_bbb.mp4" type="video/mp4">
@@ -73,7 +84,7 @@
 			</figure>
 			<h2 class="titulo_item">
 				<a href="#">
-				Deploy de Django sobre Docker
+				Monitorea tu aplicación en tiempo real con New Relic
 				</a>
 			</h2>
 			<div class="autor_item">
@@ -99,7 +110,7 @@
 			</figure>
 			<h2 class="titulo_item">
 				<a href="#">
-				Crea tu propio framework CSS con Stylus
+				Monitorea tu aplicación en tiempo real con New Relic
 				</a>
 			</h2>
 			<div class="autor_item">
@@ -125,7 +136,7 @@
 			</figure>
 			<h2 class="titulo_item">
 				<a href="#">
-				Las mejores técnicas de email marketing: 
+				Monitorea tu aplicación en tiempo real con New Relic
 				</a>
 			</h2>
 			<div class="autor_item">
@@ -151,7 +162,7 @@
 			</figure>
 			<h2 class="titulo_item">
 				<a href="#">
-				PyCharm: El mejor IDE para tus proyectos en Python
+				Monitorea tu aplicación en tiempo real con New Relic
 				</a>
 			</h2>
 			<div class="autor_item">
@@ -177,7 +188,7 @@
 			</figure>
 			<h2 class="titulo_item">
 				<a href="#">
-				Docker: La plataforma ideal para developers y sysadmins
+				Monitorea tu aplicación en tiempo real con New Relic
 				</a>
 			</h2>
 			<div class="autor_item">
@@ -209,5 +220,7 @@
 
 		</p>
 	</footer>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>	
+	<script type="text/javascript" src="formulario.js"></script>
 </body>
 </html>
