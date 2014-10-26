@@ -5,8 +5,22 @@ var $form = $('#formulario'),
 	$list	= $('#contenido'),
 	$post	= $('.item').first();
 
+
+if(localStorage.getItem('autosave')){
+
+	$titulo.val(sessionStorage.getItem('titulo'));
+	$url.val(sessionStorage.getItem('url'));
+}
+
+var id = setInterval(function(){
+
+	sessionStorage.setItem('titulo',$titulo.val());
+	sessionStorage.setItem('url',$url.val());
+
+},1000);
 //funciones
-function agregarPost(){
+function agregarPost(e){
+	e.preventDefault();
 	var url= $url.val(),
 	 	titulo = $titulo.val(),
 	 	$clone = $post.clone();
@@ -15,26 +29,28 @@ function agregarPost(){
 	 		 	.text(titulo)
 	 		 	.attr('href',url);
 	 $clone.hide();	
-
+	 MostrarOcultarForm();
 	 $list.prepend($clone);
 	 $clone.fadeIn();
+	 $url.val('');
+	 $titulo.val('');
+	 return false;
 
 }
+
+function MostrarOcultarForm(e){
+	e.preventDefault();
+	$form.slideToggle();
+	$list.slideToggle();
+	$titulo.focus();
+
+}
+
 //Eventos
 
 $form.on('submit',agregarPost);
 
-$button.click(function(){
-
-	/*if($form.css('display') == 'none')
-		$form.slideDown();
-	else
-		$form.slideUp();
-	*/
-	$form.slideToggle();
-	$titulo.focus();
-	return false;
-})
+$button.click(MostrarOcultarForm);
 
 
 

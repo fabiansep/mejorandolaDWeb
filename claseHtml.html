@@ -222,5 +222,15 @@
 	</footer>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>	
 	<script type="text/javascript" src="formulario.js"></script>
+	<script>
+		window.onload= function(){
+			console.log("Ya se disparo el evento load");
+		}
+
+		$(document).on("ready",function(){
+			console.log("Se disparo desde jQuery");
+		});
+	</script
+
 </body>
 </html>
