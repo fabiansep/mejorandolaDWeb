@@ -20,7 +20,7 @@ var id = setInterval(function(){
 },1000);
 //funciones
 function agregarPost(e){
-	e.preventDefault();
+	//e.preventDefault();
 	var url= $url.val(),
 	 	titulo = $titulo.val(),
 	 	$clone = $post.clone();
@@ -39,7 +39,7 @@ function agregarPost(e){
 }
 
 function MostrarOcultarForm(e){
-	e.preventDefault();
+	//e.preventDefault();
 	$form.slideToggle();
 	$list.slideToggle();
 	$titulo.focus();
