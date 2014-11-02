@@ -18,8 +18,13 @@ $(function(){
 		mapa.src	="http://maps.googleapis.com/maps/api/staticmap?zoom=13&size=300x400&sensor=false&center="+lat+","+lon;
 
 		$('#geo').append(mapa);
-		
+		window.lat = lat;
+		window.lon = lon;
+
+		obtenerGeoInformacion(lat,lon);
 	}
+
+
 
 	geo.getCurrentPosition(geo_exito,geo_error,opciones)
 
